@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --hue: 220; /* Cambia este valor para ajustar el tono del color */
+  --shadow: oklch(25% .2 var(--hue));
+  --highlight: oklch(98% .05 var(--hue));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer custom {
+  .highlighted-text-shadow {
+    text-shadow:
+      0 .15ch 15px var(--shadow),
+      0 -2px 0 var(--highlight);
+  }
+}
+
+.text-outline {
+  -webkit-text-stroke: 2px #fff; 
+  color: transparent; 
+}
