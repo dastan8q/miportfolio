@@ -3,11 +3,12 @@ import localFont from "next/font/local";
 import '@fontsource-variable/rubik'; 
 import '@fontsource-variable/geologica';
 import "./globals.css";
+import { Providers } from "./providers";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const geologicaRegular = localFont({
+  src: "./fonts/Geologica/Geologica-Regular.ttf",
+  variable: "--font-geologica-regular",
+  weight: "400",
 });
 
 const geistMono = localFont({
@@ -29,9 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-rubik antialiased`}
+        className={`${geologicaRegular.variable} ${geistMono.variable} font-rubik antialiased`}
       >
-        {children}
+       <Providers> {children} </Providers>
+
       </body>
     </html>
   );
