@@ -28,6 +28,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .paused {
+    animation-play-state: paused;
+  }
 }
 
 @layer custom {
@@ -68,3 +72,26 @@ body {
 .accordion-content {
   display: block;
 }
+
+
+@keyframes loop-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-loop-scroll {
+  animation: loop-scroll 25s linear infinite;
+}
+
+
+/* .text-darkMode {
+  color: #14191d; 
+}
+
+.text-brightMode {
+  color: #c6d6db; 
+} */

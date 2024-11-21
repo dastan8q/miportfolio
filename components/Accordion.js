@@ -1,30 +1,34 @@
 "use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Accordion() {
   const [activeIndex, setActiveIndex] = useState(null);
-  
+
   const projects = [
     { 
       name: "todo-app", 
       description: "Todo-app es una herramienta de lista de tareas por hacer, con categorias para llevar orden de cada tarea.", 
-      image: "/images/todo-app.PNG" 
+      image: "/images/todo-app.PNG",
+      link: "https://github.com/dastan8q/todo-app"
     },
     { 
       name: "Tecnologica", 
-      description: "Detalles del proyecto Tecnologica.", 
-      image: "/docs/images/blog/tecnologica.jpg" 
+      description: "Una plataforma web de venta de cursos online relacionados con la tecnología, con distintas funciones que contemplan un CRUD con varios modelos, interfaces, clases, etc. Donde se aplica muchos conceptos de POO.", 
+      image: "/images/tecnologica.png",
+      link: "https://github.com/dastan8q/tecnologica"
     },
     { 
       name: "Watch app", 
-      description: "Detalles del proyecto Watch app.", 
-      image: "/docs/images/blog/watch-app.jpg" 
+      description: "Una aplicación de reloj multifuncional desarrollada en Java usando patron de diseño Factory Method, incluye tres componentes principales: un reloj digital, un cronómetro (stopwatch) y un temporizador (timer). Cada componente proporciona una interfaz gráfica intuitiva para gestionar y visualizar el tiempo de diferentes maneras.", 
+      image: "/images/watchapp.png",
+      link: "https://github.com/mario8q/WatchApp"
     },
     { 
       name: "JustWork", 
-      description: "Detalles del proyecto JustWork.", 
-      image: "/docs/images/blog/justwork.jpg" 
+      description: "Just Work! es una aplicación web de redes profesionales, definida para tener una fácil conexión entre profesionales que buscan trabajo y empresas que ofrecen esos empleos.", 
+      image: "/images/justwork.png",
+      link: "https://github.com/dastan8q/justwork"
     }
   ];
 
@@ -39,7 +43,7 @@ export default function Accordion() {
           <h2 id={`accordion-collapse-heading-${index}`}>
             <button 
               type="button" 
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-darkMode bg-brightMode focus:ring-1 focus:ring-darkMode" 
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-darkMode dark:text-brightText bg-brightMode dark:bg-darkMode focus:ring-1 focus:ring-darkMode"
               onClick={() => toggleAccordion(index)}
             >
               <span>{project.name}</span>
@@ -63,7 +67,7 @@ export default function Accordion() {
             aria-labelledby={`accordion-collapse-heading-${index}`}
           >
             <div className="p-5">
-              <div className="max-w-sm bg-brightText border border-gray-200 rounded-lg shadow dark:bg-darkMode dark:border-darkMode">
+              <div className="max-w-sm bg-brightText border border-gray-200 rounded-lg shadow dark:bg-darkText dark:border-darkMode">
                 <a href="#">
                   <img 
                     className="rounded-t-lg" 
@@ -73,14 +77,16 @@ export default function Accordion() {
                 </a>
                 <div className="p-5">
                   <a href="#">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-darkMode">Proyecto {project.name}</h5>
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-darkMode dark:text-brightMode">Proyecto {project.name}</h5>
                   </a>
-                  <p className="mb-3 font-normal text-darkMode">{project.description}</p>
+                  <p className="mb-3 font-normal text-darkMode dark:text-brightTitle">{project.description}</p>
                   <a 
-                    href="#" 
-                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-darkMode rounded-lg hover:bg-darkMode focus:ring-4 focus:outline-none focus:ring-brightMode dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-brightTitle bg-brightButton rounded-lg hover:bg-brightMode focus:ring-4 focus:outline-none focus:ring-brightButton dark:bg-darkMode dark:hover:bg-darkerText dark:focus:ring-darkMode"
                   >
-                    Leer más
+                    Source code
                     <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                       <path 
                         stroke="currentColor" 
