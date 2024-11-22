@@ -41,6 +41,8 @@ export default function Home() {
               src="https://i.pinimg.com/originals/42/9b/b4/429bb47fcda0b84f88ec04fbe9ac2328.jpg"
               alt="Mi imagen MS"
               className="object-cover rounded-lg sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96"
+              width={500}
+              height={500}
             />
             <h1 className="absolute text-outline text-6xl md:text-8xl lg:text-9xl font-bold text-center z-10">
               SOFTWARE ENGINEER

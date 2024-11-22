@@ -22,20 +22,20 @@ export default function MisStacks() {
       </div>
       <div className="flex space-x-16 overflow-hidden group">
         <section className="flex animate-loop-scroll space-x-16 group-hover:paused">
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f64967f2c0ffea58d4042b7fbaeb6ac432121ea8896c60a4a1b7acb2f81eabd2?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 1" className="max-w-none" />
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ef6e7fb9ac9987e5ead5d9b11088ccb2278fad1fea93cdde77901f9392e0c8b3?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 2" className="max-w-none" />
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/effdae95f23a6106c9c4e12542e9835a98fa68f0fd73ad964e186a36c7eaa80d?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 3" className="max-w-none" />
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9577d5e7589abdcda1af8399f95f72868496592ea6782213ac314beb2cd17c4e?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 4" className="max-w-none" />
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/554d5b20ed85fa52a2a49aed8d682f511165152c66e7afb66e1c30d41b65eeca?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 5" className="max-w-none" />
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/29556243d230b493b0830742cf619dde22bdc046aa9a523219c562697da208f4?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 6" className="max-w-none" />
+          <Image loading="lazy" src="/images/python-127-svgrepo-com.png" alt="Partner Logo 1" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/java-svgrepo-com.png" alt="Partner Logo 2" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/git-svgrepo-com.png" alt="Partner Logo 3" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/github-svgrepo-com.png" alt="Partner Logo 4" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/azure-devops-svgrepo-com.png" alt="Partner Logo 5" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/eclipseide-svgrepo-com.png" alt="Partner Logo 6" className="max-w-none" width={210} height={210}/>
         </section>
         <section className="flex animate-loop-scroll space-x-16 group-hover:paused" aria-hidden="true">
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f64967f2c0ffea58d4042b7fbaeb6ac432121ea8896c60a4a1b7acb2f81eabd2?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 1" className="max-w-none" />
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ef6e7fb9ac9987e5ead5d9b11088ccb2278fad1fea93cdde77901f9392e0c8b3?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 2" className="max-w-none" />
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/effdae95f23a6106c9c4e12542e9835a98fa68f0fd73ad964e186a36c7eaa80d?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 3" className="max-w-none" />
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9577d5e7589abdcda1af8399f95f72868496592ea6782213ac314beb2cd17c4e?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 4" className="max-w-none" />
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/554d5b20ed85fa52a2a49aed8d682f511165152c66e7afb66e1c30d41b65eeca?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 5" className="max-w-none" />
-          <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/29556243d230b493b0830742cf619dde22bdc046aa9a523219c562697da208f4?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" alt="Partner Logo 6" className="max-w-none" />
+          <Image loading="lazy" src="/images/python-127-svgrepo-com.png" alt="Partner Logo 1" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/java-svgrepo-com.png" alt="Partner Logo 2" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/git-svgrepo-com.png" alt="Partner Logo 3" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/github-svgrepo-com.png" alt="Partner Logo 4" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/azure-devops-svgrepo-com.png" alt="Partner Logo 5" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/eclipseide-svgrepo-com.png" alt="Partner Logo 6" className="max-w-none" width={210} height={210}/>
         </section>
       </div>
     </section>

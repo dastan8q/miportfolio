@@ -77,6 +77,8 @@ const Carousel = () => {
                   src={slide.imgSrc}
                   alt={slide.alt}
                   className="w-full h-56 sm:h-64 md:h-72 object-cover rounded mb-6"
+                  width={1}
+                  height={56}
                 />
                 <h3 className="text-3xl font-bold text-darkMode dark:text-brightMode mb-4">
                   {slide.title}

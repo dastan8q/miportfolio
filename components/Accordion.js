@@ -74,6 +74,8 @@ export default function Accordion() {
                     className="rounded-t-lg" 
                     src={project.image} 
                     alt={`Imagen del proyecto ${project.name}`} 
+                    width={500}
+                    height={500}
                   />
                 </a>
                 <div className="p-5">
