@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { useState } from "react";
 
 const Carousel = () => {
@@ -72,7 +73,7 @@ const Carousel = () => {
               }`}
             >
               <div className="bg-brightTitle dark:bg-darkText p-8 rounded-lg shadow-lg text-center w-full md:w-3/4 lg:w-1/2 xl:w-1/3">
-                <img
+                <Image
                   src={slide.imgSrc}
                   alt={slide.alt}
                   className="w-full h-56 sm:h-64 md:h-72 object-cover rounded mb-6"

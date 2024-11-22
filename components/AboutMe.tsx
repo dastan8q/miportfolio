@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
+import Image from 'next/image';
 
 export default function AboutMe() {
 
   return (
     <section className="bg-brightMode flex flex-col justify-center items-center py-44 dark:bg-darkMode">
         <div className="flex items-center">
-        <img className="rounded-full w-14 h-14 mr-4" src="https://i.pinimg.com/originals/42/9b/b4/429bb47fcda0b84f88ec04fbe9ac2328.jpg" alt="logo pop" />
+        <Image className="rounded-full w-14 h-14 mr-4" src="https://i.pinimg.com/originals/42/9b/b4/429bb47fcda0b84f88ec04fbe9ac2328.jpg" alt="logo pop" />
         <h1 className="text-darkMode text-5xl font-bold dark:text-brightMode">¡Hola! soy Mario Santacruz</h1>
         </div>
         <div className="bg-brightTitle text-darkMode rounded-lg shadow-lg p-5 w-85 mt-4 dark:bg-brightTitle"> 

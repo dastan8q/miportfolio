@@ -6,9 +6,9 @@ import Carousel from '@/components/Carousel';
 import MisStacks from '@/components/MisStacks';
 import MisStacksPlus from '@/components/MisStacksPlus';
 import Experiencia from '@/components/Experiencia';
-import Link from 'next/link';
 import AboutMe from '@/components/AboutMe';
 import ContactMe from '@/components/ContactMe';
+import Image from 'next/image';
 
 export default function Home() {
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function Home() {
           </div>
 
           <div className="absolute inset-0 flex items-center justify-center">
-            <img
+            <Image
               src="https://i.pinimg.com/originals/42/9b/b4/429bb47fcda0b84f88ec04fbe9ac2328.jpg"
               alt="Mi imagen MS"
               className="object-cover rounded-lg sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96"

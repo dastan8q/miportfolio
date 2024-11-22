@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { useState } from "react";
 
 export default function Accordion() {
@@ -69,7 +70,7 @@ export default function Accordion() {
             <div className="p-5">
               <div className="max-w-sm bg-brightText border border-gray-200 rounded-lg shadow dark:bg-darkText dark:border-darkMode">
                 <a href="#">
-                  <img 
+                  <Image 
                     className="rounded-t-lg" 
                     src={project.image} 
                     alt={`Imagen del proyecto ${project.name}`} 

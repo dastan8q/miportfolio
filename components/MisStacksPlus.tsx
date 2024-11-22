@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import Image from 'next/image';
 
 export default function MisStacks() {
 
@@ -41,20 +41,20 @@ export default function MisStacks() {
 
       <section className="flex space-x-16 overflow-hidden group">
         <aside className="flex animate-loop-scroll space-x-16 group-hover:paused">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/22b35b3b57a63e4b7a9e123631b53e2bbb17e90fc4b92b3e80d6da3fdf31d4bc?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 1" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf205bd020220887daecaa5e060d6cf20c2fbc7046780a82c7a29621fbdcea3?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 2" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7be2bd529f8704144bd1a3c392aadcd0f52aa00e2088a57c0fa166792b89a82b?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 3" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c3263b599e6958126e334cbd657001eebf079a24241235e7d349eb8862d9468?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 4" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/397f59b03a3d3056519a6c2b5252dc30093035dd19f18bc0642f3bf30219ffa4?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 5" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b50bf0620f0f0fb94ecb2e1f1c474cc898410afe696a30e739cc21ea2258ee8?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 6" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/22b35b3b57a63e4b7a9e123631b53e2bbb17e90fc4b92b3e80d6da3fdf31d4bc?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 1" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf205bd020220887daecaa5e060d6cf20c2fbc7046780a82c7a29621fbdcea3?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 2" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7be2bd529f8704144bd1a3c392aadcd0f52aa00e2088a57c0fa166792b89a82b?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 3" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c3263b599e6958126e334cbd657001eebf079a24241235e7d349eb8862d9468?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 4" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/397f59b03a3d3056519a6c2b5252dc30093035dd19f18bc0642f3bf30219ffa4?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 5" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b50bf0620f0f0fb94ecb2e1f1c474cc898410afe696a30e739cc21ea2258ee8?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 6" />
         </aside>
         <aside className="flex animate-loop-scroll space-x-16 group-hover:paused" aria-hidden="true">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/22b35b3b57a63e4b7a9e123631b53e2bbb17e90fc4b92b3e80d6da3fdf31d4bc?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 1" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf205bd020220887daecaa5e060d6cf20c2fbc7046780a82c7a29621fbdcea3?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 2" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7be2bd529f8704144bd1a3c392aadcd0f52aa00e2088a57c0fa166792b89a82b?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 3" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c3263b599e6958126e334cbd657001eebf079a24241235e7d349eb8862d9468?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 4" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/397f59b03a3d3056519a6c2b5252dc30093035dd19f18bc0642f3bf30219ffa4?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 5" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b50bf0620f0f0fb94ecb2e1f1c474cc898410afe696a30e739cc21ea2258ee8?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 6" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/22b35b3b57a63e4b7a9e123631b53e2bbb17e90fc4b92b3e80d6da3fdf31d4bc?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 1" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf205bd020220887daecaa5e060d6cf20c2fbc7046780a82c7a29621fbdcea3?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 2" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7be2bd529f8704144bd1a3c392aadcd0f52aa00e2088a57c0fa166792b89a82b?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 3" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c3263b599e6958126e334cbd657001eebf079a24241235e7d349eb8862d9468?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 4" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/397f59b03a3d3056519a6c2b5252dc30093035dd19f18bc0642f3bf30219ffa4?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 5" />
+            <Image loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b50bf0620f0f0fb94ecb2e1f1c474cc898410afe696a30e739cc21ea2258ee8?placeholderIfAbsent=true&apiKey=7e4550569fdf4650ac9f280e98b7566b" className="max-w-none" alt="Partner Logo 6" />
         </aside>
       </section>
     </section>
