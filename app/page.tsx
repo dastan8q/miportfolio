@@ -38,7 +38,7 @@ export default function Home() {
 
           <div className="absolute inset-0 flex items-center justify-center">
             <Image
-              src="https://i.pinimg.com/originals/42/9b/b4/429bb47fcda0b84f88ec04fbe9ac2328.jpg"
+              src="/images/myimage.jpg"
               alt="Mi imagen MS"
               className="object-cover rounded-lg sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96"
               width={500}

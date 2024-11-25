@@ -17,7 +17,7 @@ export default function Accordion() {
       name: "Tecnologica", 
       description: "Una plataforma web de venta de cursos online relacionados con la tecnología, con distintas funciones que contemplan un CRUD con varios modelos, interfaces, clases, etc. Donde se aplica muchos conceptos de POO.", 
       image: "/images/tecnologica.png",
-      link: "https://github.com/dastan8q/tecnologica"
+      link: "https://dev.azure.com/TecnoLogica/TecnoLogica/_git/ProyectoApiTecnologica"
     },
     { 
       name: "Watch app", 
@@ -29,7 +29,7 @@ export default function Accordion() {
       name: "JustWork", 
       description: "Just Work! es una aplicación web de redes profesionales, definida para tener una fácil conexión entre profesionales que buscan trabajo y empresas que ofrecen esos empleos.", 
       image: "/images/justwork.png",
-      link: "https://github.com/dastan8q/justwork"
+      link: "https://dev.azure.com/TecnoLogica/JustWork/_git/JustWorkAngular"
     }
   ];
 
