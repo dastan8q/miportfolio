@@ -22,20 +22,26 @@ export default function MisStacks() {
       </div>
       <div className="flex space-x-16 overflow-hidden group">
         <section className="flex animate-loop-scroll space-x-16 group-hover:paused">
-          <Image loading="lazy" src="/images/python-127-svgrepo-com.png" alt="Partner Logo 1" className="max-w-none" width={210} height={210}/>
-          <Image loading="lazy" src="/images/java-svgrepo-com.png" alt="Partner Logo 2" className="max-w-none" width={210} height={210}/>
-          <Image loading="lazy" src="/images/git-svgrepo-com.png" alt="Partner Logo 3" className="max-w-none" width={210} height={210}/>
-          <Image loading="lazy" src="/images/github-svgrepo-com.png" alt="Partner Logo 4" className="max-w-none" width={210} height={210}/>
-          <Image loading="lazy" src="/images/azure-devops-svgrepo-com.png" alt="Partner Logo 5" className="max-w-none" width={210} height={210}/>
-          <Image loading="lazy" src="/images/eclipseide-svgrepo-com.png" alt="Partner Logo 6" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/python-127-svgrepo-com.png" alt="Python" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/django-svgrepo-com.png" alt="Django" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/html-124-svgrepo-com.png" alt="HTML" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/css3-02-svgrepo-com.png" alt="CSS3" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/javascript-155-svgrepo-com.png" alt="JavaScript" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/postgresql-svgrepo-com.png" alt="PostgreSQL" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/mysql-svgrepo-com.png" alt="MySQL" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/git-svgrepo-com.png" alt="Git" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/github-svgrepo-com.png" alt="GitHub" className="max-w-none" width={210} height={210}/>
         </section>
         <section className="flex animate-loop-scroll space-x-16 group-hover:paused" aria-hidden="true">
-          <Image loading="lazy" src="/images/python-127-svgrepo-com.png" alt="Partner Logo 1" className="max-w-none" width={210} height={210}/>
-          <Image loading="lazy" src="/images/java-svgrepo-com.png" alt="Partner Logo 2" className="max-w-none" width={210} height={210}/>
-          <Image loading="lazy" src="/images/git-svgrepo-com.png" alt="Partner Logo 3" className="max-w-none" width={210} height={210}/>
-          <Image loading="lazy" src="/images/github-svgrepo-com.png" alt="Partner Logo 4" className="max-w-none" width={210} height={210}/>
-          <Image loading="lazy" src="/images/azure-devops-svgrepo-com.png" alt="Partner Logo 5" className="max-w-none" width={210} height={210}/>
-          <Image loading="lazy" src="/images/eclipseide-svgrepo-com.png" alt="Partner Logo 6" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/python-127-svgrepo-com.png" alt="Python" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/git-svgrepo-com.png" alt="Git" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/github-svgrepo-com.png" alt="GitHub" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/django-svgrepo-com.png" alt="Django" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/html-124-svgrepo-com.png" alt="HTML" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/css3-02-svgrepo-com.png" alt="CSS3" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/javascript-155-svgrepo-com.png" alt="JavaScript" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/postgresql-svgrepo-com.png" alt="PostgreSQL" className="max-w-none" width={210} height={210}/>
+          <Image loading="lazy" src="/images/mysql-svgrepo-com.png" alt="MySQL" className="max-w-none" width={210} height={210}/>
         </section>
       </div>
     </section>

@@ -41,20 +41,18 @@ export default function MisStacks() {
 
       <section className="flex space-x-16 overflow-hidden group">
         <aside className="flex animate-loop-scroll space-x-16 group-hover:paused">
-            <Image loading="lazy" src="/images/angular-svgrepo-com.png" className="max-w-none" alt="Partner Logo 1" width={210} height={210}/>
-            <Image loading="lazy" src="/images/mysql-svgrepo-com.png" className="max-w-none" alt="Partner Logo 2" width={210} height={210}/>
-            <Image loading="lazy" src="/images/tailwind-css-svgrepo-com.png" className="max-w-none" alt="Partner Logo 3" width={210} height={210}/>
-            <Image loading="lazy" src="/images/google-cloud-svgrepo-com.png" className="max-w-none" alt="Partner Logo 4" width={210} height={210}/>
-            <Image loading="lazy" src="/images/brand-typescript-svgrepo-com.png" className="max-w-none" alt="Partner Logo 5" width={210} height={210}/>
-            <Image loading="lazy" src="/images/postgresql-svgrepo-com.png" className="max-w-none" alt="Partner Logo 6" width={210} height={210}/>
+            <Image loading="lazy" src="/images/redis-svgrepo-com.png" alt="Redis" className="max-w-none" width={210} height={210}/>
+            <Image loading="lazy" src="/images/celery-svgrepo-com.png" alt="Celery" className="max-w-none" width={210} height={210}/>
+            <Image loading="lazy" src="/images/rabbitmq-icon-svgrepo-com.png" alt="RabbitMQ" className="max-w-none" width={210} height={210}/>
+            <Image loading="lazy" src="/images/react-svgrepo-com.png" alt="React" className="max-w-none" width={210} height={210}/>
+            <Image loading="lazy" src="/images/docker-svgrepo-com.png" alt="Docker" className="max-w-none" width={210} height={210}/>
         </aside>
         <aside className="flex animate-loop-scroll space-x-16 group-hover:paused" aria-hidden="true">
-            <Image loading="lazy" src="/images/angular-svgrepo-com.png" className="max-w-none" alt="Partner Logo 1" width={210} height={210}/>
-            <Image loading="lazy" src="/images/mysql-svgrepo-com.png" className="max-w-none" alt="Partner Logo 2" width={210} height={210}/>
-            <Image loading="lazy" src="/images/tailwind-css-svgrepo-com.png" className="max-w-none" alt="Partner Logo 3" width={210} height={210}/>
-            <Image loading="lazy" src="/images/google-cloud-svgrepo-com.png" className="max-w-none" alt="Partner Logo 4" width={210} height={210}/>
-            <Image loading="lazy" src="/images/brand-typescript-svgrepo-com.png" className="max-w-none" alt="Partner Logo 5" width={210} height={210}/>
-            <Image loading="lazy" src="/images/postgresql-svgrepo-com.png" className="max-w-none" alt="Partner Logo 6" width={210} height={210}/>
+            <Image loading="lazy" src="/images/redis-svgrepo-com.png" alt="Redis" className="max-w-none" width={210} height={210}/>
+            <Image loading="lazy" src="/images/celery-svgrepo-com.png" alt="Celery" className="max-w-none" width={210} height={210}/>
+            <Image loading="lazy" src="/images/rabbitmq-icon-svgrepo-com.png" alt="RabbitMQ" className="max-w-none" width={210} height={210}/>
+            <Image loading="lazy" src="/images/react-svgrepo-com.png" alt="React" className="max-w-none" width={210} height={210}/>
+            <Image loading="lazy" src="/images/docker-svgrepo-com.png" alt="Docker" className="max-w-none" width={210} height={210}/>
         </aside>
       </section>
     </section>
