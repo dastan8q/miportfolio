@@ -14,6 +14,114 @@ export default function Home() {
     import('flowbite');
   }, []);
 
+  useEffect(() => {
+    let timeline: { pause: () => void } | null = null;
+    let cancelled = false;
+
+    async function playIntro() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const { default: anime } = await import('animejs/lib/anime.es.js');
+      if (cancelled) return;
+
+      const letters = document.querySelector<HTMLElement>('.ml11 .letters');
+      if (!letters) return;
+
+      if (!letters.querySelector('.letter')) {
+        letters.innerHTML =
+          letters.textContent?.replace(
+            /([^\x00-\x80]|\w)/g,
+            "<span class='letter'>$&</span>"
+          ) ?? '';
+      }
+
+      await document.fonts.ready;
+      const width = letters.getBoundingClientRect().width;
+
+      timeline = anime
+        .timeline({ loop: true })
+        .add({
+          targets: '.ml11 .line',
+          scaleY: [0, 1],
+          opacity: [0.5, 1],
+          easing: 'easeOutExpo',
+          duration: 320,
+        })
+        .add({
+          targets: '.ml11 .line',
+          translateX: [0, width + 10],
+          easing: 'easeOutExpo',
+          duration: 640,
+          delay: 40,
+        })
+        .add({
+          targets: '.ml11 .letter',
+          opacity: [0, 1],
+          easing: 'easeOutExpo',
+          duration: 260,
+          offset: '-=700',
+          delay: (_el, i) => 26 * (i + 1),
+        })
+        .add({
+          targets: '.ml11',
+          opacity: 0,
+          duration: 1000,
+          easing: 'easeOutExpo',
+          delay: 1000,
+        });
+    }
+
+    playIntro();
+
+    return () => {
+      cancelled = true;
+      timeline?.pause();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const targets = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'));
+    if (!targets.length) return;
+
+    document.documentElement.classList.add('reveal-ready');
+
+    if (typeof IntersectionObserver === 'undefined') {
+      targets.forEach((el) => el.classList.add('is-revealed'));
+      return;
+    }
+
+    const pending: HTMLElement[] = [];
+    targets.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.88 && rect.bottom > 0) {
+        el.classList.add('is-revealed');
+      } else {
+        pending.push(el);
+      }
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: '0px 0px -12% 0px' }
+    );
+
+    pending.forEach((el) => observer.observe(el));
+
+    return () => {
+      observer.disconnect();
+      targets.forEach((el) => el.classList.remove('is-revealed'));
+      document.documentElement.classList.remove('reveal-ready');
+    };
+  }, []);
+
   return (
     <>
       <header id='inicio'>
@@ -36,19 +144,22 @@ export default function Home() {
           </div>
 
           <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="absolute text-outline text-6xl md:text-8xl lg:text-9xl font-bold text-center z-10">
-              SOFTWARE ENGINEER
+            <h1 className="ml11 absolute text-outline text-6xl md:text-8xl lg:text-9xl font-bold text-center z-10">
+              <span className="text-wrapper">
+                <span className="line line1"></span>
+                <span className="letters">SOFTWARE ENGINEER</span>
+              </span>
             </h1>
           </div>
         </section>
       </header>
 
-      <main className='min-h-screen w-full overflow-x-hidden bg-brightMode'>
-        <section id='sobre-mi'>
+      <main className='min-h-screen w-full overflow-x-hidden bg-brightMode dark:bg-darkMode'>
+        <section id='sobre-mi' data-reveal>
           <AboutMe />
         </section>
 
-        <section id='mis-proyectos' className="bg-brightMode flex flex-col justify-center items-center py-20 dark:bg-darkMode">
+        <section id='mis-proyectos' data-reveal className="bg-brightMode flex flex-col justify-center items-center py-20 dark:bg-darkMode">
           <div className="flex items-center mb-10">
           <svg
             className="fill-current text-darkMode dark:text-brightMode"
@@ -73,15 +184,15 @@ export default function Home() {
           <Accordion />
         </section>
 
-        <section id='experiencia'>
+        <section id='experiencia' data-reveal>
           <Experiencia />
         </section>
 
-        <section id='mis-hobbies'>
+        <section id='mis-hobbies' data-reveal>
           <Carousel />
         </section>
 
-        <section id='mis-stacks'>
+        <section id='mis-stacks' data-reveal>
           <aside>
             <MisStacks />
           </aside>
@@ -90,7 +201,7 @@ export default function Home() {
           </aside>
         </section>
 
-        <section id='contactame'>
+        <section id='contactame' data-reveal>
           <ContactMe />
         </section>
       </main>
