@@ -32,6 +32,30 @@ export default function Experiencia() {
           <ol className="relative border-l border-darkMode dark:border-brightMode">
             <li className="mb-10 ml-4">
               <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
+              <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
+                Julio 2026
+              </time>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                Universidad Cooperativa de Colombia
+              </h3>
+              <p className="mb-4 text-base font-normal text-darkText dark:text-gray-400">
+                Me gradué como Ingeniero de Software con mención de honor por tener el mejor promedio de la carrera, fue un camino de aprendizaje que me dio las bases para resolver problemas a través del software de manera ética y responsable.
+              </p>
+            </li>
+            <li className="mb-10 ml-4">
+              <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
+              <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
+                  Agosto 2021
+              </time>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  Cambridge Academy - San Juan de Pasto
+              </h3>
+              <p className="text-base font-normal text-darkText dark:text-gray-400">
+                  Me forme en una academia de ingles donde presente un examen internacional con calificaciones de B2 y C1 en los diferentes modulos de ingles.
+              </p>
+            </li>
+            <li className="mb-10 ml-4">
+              <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
               <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">Septiembre 2009</time>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                 Colegio San Francisco de Asis - San Juan de Pasto
@@ -40,30 +64,6 @@ export default function Experiencia() {
                 Estudie toda la primaria y bachillerato en el Colegio San Francisco de asis donde aprendí a ser más y mejor persona.
               </p>
             </li>
-            <li className="mb-10 ml-4">
-                <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
-                    Agosto 2022
-                </time>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    Universidad Cooperativa de Colombia Campus Pasto
-                </h3>
-                <p className="text-base font-normal text-darkText dark:text-gray-400">
-                    Actualmente estoy en 5to semestre, aprendiendo todo sobre resolver problemas de software con ingenio y creatividad.
-                </p>
-            </li>
-            <li className="ml-4">
-                <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
-                    Agosto 2021
-                </time>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    Cambridge Academy - San Juan de Pasto
-                </h3>
-                <p className="text-base font-normal text-darkText dark:text-gray-400">
-                    Me forme en una academia de ingles donde presente un examen internacional con calificaciones de B2 y C1 en los diferentes modulos de ingles.
-                </p>
-            </li>
           </ol>
         </div>
         <div>
@@ -71,10 +71,26 @@ export default function Experiencia() {
           <ol className="relative border-l border-darkMode dark:border-brightMode">
             <li className="mb-10 ml-4">
               <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">Fecha futura</time>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Aún sin experiencia laboral</h3>
+              <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
+                Abril 2026
+              </time>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                Ingeniero backend en Sipyme
+              </h3>
+              <p className="mb-4 text-base font-normal text-darkText dark:text-gray-400">
+                Participé en el desarrollo de una aplicación web ERP llamada Sipyme, enfocada en pequeñas y medianas empresas. Me enfoqué en el backend con Django REST framework y PostgreSQL, utilicé patrones de diseño, realicé pruebas unitarias, documenté APIs y realicé el control de versiones con Git y GitHub.
+              </p>
+            </li>
+            <li className="ml-4">
+              <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
+              <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
+                Diciembre 2025
+              </time>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                Mentor en programación con Python
+              </h3>
               <p className="text-base font-normal text-darkText dark:text-gray-400">
-                Actualizaré esta sección con futuras experiencias profesionales.
+                Enseñé las bases de programación para estudiantes de Latinoamérica inscritos al programa PYLATINO, organizado por Uniandes en colaboración con Stanford. Hice el seguimiento de estudiantes asignados a una clase en la plataforma Code in Place.
               </p>
             </li>
           </ol>

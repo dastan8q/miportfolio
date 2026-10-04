@@ -9,7 +9,7 @@ export default function AboutMe() {
         <h1 className="text-darkMode text-5xl font-bold dark:text-brightMode">¡Hola! soy Mario Santacruz</h1>
         </div>
         <div className="bg-brightTitle text-darkMode rounded-lg shadow-lg p-5 w-85 mt-4 dark:bg-brightTitle"> 
-        <h2 className="flex text-center text-xl">Estudiante en ingeniería de software que resuelve problemas de manera eficiente
+        <h2 className="flex text-center text-xl">Ingeniero de software que resuelve problemas de manera eficiente
             <br />buscando soluciones creativas 
             <br />que impulsan proyectos innovadores
         </h2>

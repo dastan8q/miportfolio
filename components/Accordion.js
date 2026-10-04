@@ -30,6 +30,13 @@ export default function Accordion() {
       description: "Just Work! es una aplicación web de redes profesionales, definida para tener una fácil conexión entre profesionales que buscan trabajo y empresas que ofrecen esos empleos.", 
       image: "/images/justwork.png",
       link: "https://dev.azure.com/TecnoLogica/JustWork/_git/JustWorkAngular"
+    }, 
+    { 
+      name: "PickurFit", 
+      description: "PickurFit es una aplicación web que facilita el proceso de generar atuendos en el día a día según diferentes parámetros como el clima, los gustos del usuario, colores, etc... incorpora redes neuronales para la generación, dashboard, calendario, armario, recomendador de prendas, chatbot, entre más funcionalidades.", 
+      image: "/images/pickurfit_project.png", 
+      link: "https://github.com/hamil312/outfit-gen",
+      demo: "https://outfit-byjpwbuqb-hamilton-insandaras-projects.vercel.app/"
     }
   ];
 
@@ -83,23 +90,44 @@ export default function Accordion() {
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-darkMode dark:text-brightMode">Proyecto {project.name}</h5>
                   </a>
                   <p className="mb-3 font-normal text-darkMode dark:text-brightTitle">{project.description}</p>
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-brightTitle bg-brightButton rounded-lg hover:bg-brightMode focus:ring-4 focus:outline-none focus:ring-brightButton dark:bg-darkMode dark:hover:bg-darkerText dark:focus:ring-darkMode"
-                  >
-                    Source code
-                    <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                      <path 
-                        stroke="currentColor" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth="2" 
-                        d="M1 5h12m0 0L9 1m4 4L9 9"
-                      />
-                    </svg>
-                  </a>
+                  <div className="flex flex-col items-start gap-3">
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-3 py-2 text-sm font-medium text-brightTitle bg-brightButton rounded-lg hover:bg-brightMode focus:ring-4 focus:outline-none focus:ring-brightButton dark:bg-darkMode dark:hover:bg-darkerText dark:focus:ring-darkMode"
+                    >
+                      Source code
+                      <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path 
+                          stroke="currentColor" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeWidth="2" 
+                          d="M1 5h12m0 0L9 1m4 4L9 9"
+                        />
+                      </svg>
+                    </a>
+                    {project.demo && (
+                      <a 
+                        href={project.demo} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-3 py-2 text-sm font-medium text-darkMode border border-darkMode rounded-lg hover:bg-darkMode hover:text-brightTitle focus:ring-4 focus:outline-none focus:ring-darkMode dark:text-brightMode dark:border-brightMode dark:hover:bg-brightMode dark:hover:text-darkMode dark:focus:ring-brightMode"
+                      >
+                        Demo
+                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                          <path 
+                            stroke="currentColor" 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth="2" 
+                            d="M1 5h12m0 0L9 1m4 4L9 9"
+                          />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

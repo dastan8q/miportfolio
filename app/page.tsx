@@ -8,7 +8,6 @@ import MisStacksPlus from '@/components/MisStacksPlus';
 import Experiencia from '@/components/Experiencia';
 import AboutMe from '@/components/AboutMe';
 import ContactMe from '@/components/ContactMe';
-import Image from 'next/image';
 
 export default function Home() {
   useEffect(() => {
@@ -37,13 +36,6 @@ export default function Home() {
           </div>
 
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image
-              src="/images/myimage.jpg"
-              alt="Mi imagen MS"
-              className="object-cover rounded-lg sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96"
-              width={500}
-              height={500}
-            />
             <h1 className="absolute text-outline text-6xl md:text-8xl lg:text-9xl font-bold text-center z-10">
               SOFTWARE ENGINEER
             </h1>
