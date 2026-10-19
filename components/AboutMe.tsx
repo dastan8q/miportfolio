@@ -1,17 +1,26 @@
+'use client';
+
 import Image from 'next/image';
+import { Fragment } from 'react';
+import { useLanguage } from '@/i18n/LanguageProvider';
 
 export default function AboutMe() {
+  const { t } = useLanguage();
 
   return (
     <section className="bg-brightMode flex flex-col justify-center items-center py-44 dark:bg-darkMode">
         <div className="flex items-center">
         <Image className="rounded-full w-14 h-14 mr-4" src="https://i.pinimg.com/originals/42/9b/b4/429bb47fcda0b84f88ec04fbe9ac2328.jpg" width={500} height={500} alt="logo pop" />
-        <h1 className="text-darkMode text-5xl font-bold dark:text-brightMode">¡Hola! soy Mario Santacruz</h1>
+        <h1 className="text-darkMode text-5xl font-bold dark:text-brightMode">{t.about.heading}</h1>
         </div>
         <div className="bg-brightTitle text-darkMode rounded-lg shadow-lg p-5 w-85 mt-4 dark:bg-brightTitle"> 
-        <h2 className="flex text-center text-xl">Ingeniero de software que resuelve problemas de manera eficiente
-            <br />buscando soluciones creativas 
-            <br />que impulsan proyectos innovadores
+        <h2 className="flex text-center text-xl">
+          {t.about.tagline.map((line, index) => (
+            <Fragment key={index}>
+              {line}
+              {index < t.about.tagline.length - 1 && <br />}
+            </Fragment>
+          ))}
         </h2>
         </div>
         <ul className="mt-4 flex space-x-4"> 

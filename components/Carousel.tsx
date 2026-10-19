@@ -2,35 +2,22 @@
 
 import Image from 'next/image';
 import { useState } from "react";
+import { useLanguage } from '@/i18n/LanguageProvider';
+
+const slideImages = [
+  "/images/tenor.gif",
+  "/images/tenorpelicula.gif",
+  "/images/tenorpk.gif",
+];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useLanguage();
 
-  const slides = [
-    {
-      title: "Videojuegos",
-      imgSrc: "/images/tenor.gif",
-      alt: "Videojuegos",
-      description:
-        "Los videojuegos son un pasatiempo que disfruto mucho. Me gusta todo tipo de juegos, desde el triple A, hasta juegos Indie. Pero, mi juego favorito, que de hecho es el primero que jugué aproximadamente en 2008, es Prince of Persia The Two Thrones.",
-    },
-    {
-      title: "Películas y series",
-      imgSrc:
-        "/images/tenorpelicula.gif",
-      alt: "Películas y series",
-      description:
-        "Ver películas y series, es un pasatiempo que despeja mi mente. Mi género de películas favorito es el suspenso; por otro lado, el género que más me gusta en las series es el drama. No tengo una película favorita, pero me gusta mucho Nocturnal Animals.",
-    },
-    {
-      title: "Parkour",
-      imgSrc:
-        "/images/tenorpk.gif",
-      alt: "PK",
-      description:
-        "En 2017 con 12 años conocí el Parkour. Una disciplina que se basa en superar obstáculos con tu cuerpo, dure más de 1 año y medio entrenando. A día de hoy me gustaría seguir practicándolo, pero por algunas cuestiones lo he dejado a un lado.",
-    },
-  ];
+  const slides = t.hobbies.slides.map((slide, index) => ({
+    ...slide,
+    imgSrc: slideImages[index],
+  }));
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
@@ -60,7 +47,7 @@ const Carousel = () => {
             <path d="M24,25.6V22c0-0.9-0.4-1.8-1.2-2.4l-3.7-2.8c-0.3-0.2-0.4-0.5-0.4-0.8s0.1-0.6,0.4-0.8l3.7-2.8c0.8-0.6,1.2-1.5,1.2-2.4V6.4 c1.2-0.7,2-2,2-3.4c0-0.6-0.4-1-1-1H7C6.4,2,6,2.4,6,3c0,1.5,0.8,2.7,2,3.4V10c0,0.9,0.4,1.8,1.2,2.4l3.7,2.8 c0.3,0.2,0.4,0.5,0.4,0.8s-0.1,0.6-0.4,0.8l-3.7,2.8C8.4,20.2,8,21.1,8,22v3.6c-1.2,0.7-2,2-2,3.4c0,0.6,0.4,1,1,1h18 c0.6,0,1-0.4,1-1C26,27.5,25.2,26.3,24,25.6z M12.4,10.8c-0.4-0.2-0.5-0.7-0.4-1.1C12.2,9.3,12.6,9,13,9h6c0.4,0,0.8,0.3,1,0.7 c0.1,0.4,0,0.9-0.4,1.1l-3,2C16.4,12.9,16.2,13,16,13s-0.4-0.1-0.6-0.2L12.4,10.8z M15.3,20.3c0.4-0.4,1-0.4,1.4,0l4.7,4.7H10.6 L15.3,20.3z"></path>
           </g>
         </svg>
-          <h1 className="text-darkMode text-5xl font-bold ml-4 dark:text-brightMode">Mis hobbies</h1>
+          <h1 className="text-darkMode text-5xl font-bold ml-4 dark:text-brightMode">{t.hobbies.heading}</h1>
       </div>
 
       <div className="relative w-full md:w-3/4 mx-auto">
@@ -97,7 +84,7 @@ const Carousel = () => {
               className={`w-3 h-3 rounded-full ${
                 currentIndex === index ? "bg-darkText" : "bg-brightTitle"
               }`}
-              aria-label={`Slide ${index + 1}`}
+              aria-label={`${t.hobbies.slideLabel} ${index + 1}`}
               onClick={() => setCurrentIndex(index)}
             />
           ))}

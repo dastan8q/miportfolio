@@ -8,8 +8,12 @@ import MisStacksPlus from '@/components/MisStacksPlus';
 import Experiencia from '@/components/Experiencia';
 import AboutMe from '@/components/AboutMe';
 import ContactMe from '@/components/ContactMe';
+import LanguageSwitch from '@/components/LanguageSwitch';
+import { useLanguage } from '@/i18n/LanguageProvider';
 
 export default function Home() {
+  const { locale, t } = useLanguage();
+
   useEffect(() => {
     import('flowbite');
   }, []);
@@ -24,15 +28,18 @@ export default function Home() {
       const { default: anime } = await import('animejs/lib/anime.es.js');
       if (cancelled) return;
 
-      const letters = document.querySelector<HTMLElement>('.ml11 .letters');
+      const hero = document.querySelector<HTMLElement>('.ml11');
+      if (!hero) return;
+      hero.lang = locale;
+
+      const letters = hero.querySelector<HTMLElement>('.letters');
       if (!letters) return;
 
       if (!letters.querySelector('.letter')) {
-        letters.innerHTML =
-          letters.textContent?.replace(
-            /([^\x00-\x80]|\w)/g,
-            "<span class='letter'>$&</span>"
-          ) ?? '';
+        letters.innerHTML = t.hero.title.replace(
+          /([^\x00-\x80]|\w)/g,
+          "<span class='letter'>$&</span>"
+        );
       }
 
       await document.fonts.ready;
@@ -77,7 +84,7 @@ export default function Home() {
       cancelled = true;
       timeline?.pause();
     };
-  }, []);
+  }, [locale, t.hero.title]);
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -126,14 +133,15 @@ export default function Home() {
     <>
       <header id='inicio'>
         <nav className="bg-darkMode text-brightText p-4 flex flex-wrap justify-center sm:gap-2 md:gap-x-10 fixed w-full top-0 z-50">
-          <a href="#inicio" className="py-2">Inicio</a>
-          <a href="#sobre-mi" className="py-2">Sobre mí</a>
-          <a href="#mis-proyectos" className="py-2">Mis Proyectos</a>
-          <a href="#experiencia" className="py-2">Experiencia</a>
-          <a href="#mis-hobbies" className="py-2">Mis Hobbies</a>
-          <a href="#mis-stacks" className="py-2">Mis stacks</a>
-          <a href="#contactame" className="py-2">Contactame</a>
-          <div className=''>
+          <a href="#inicio" className="py-2">{t.nav.home}</a>
+          <a href="#sobre-mi" className="py-2">{t.nav.about}</a>
+          <a href="#mis-proyectos" className="py-2">{t.nav.projects}</a>
+          <a href="#experiencia" className="py-2">{t.nav.experience}</a>
+          <a href="#mis-hobbies" className="py-2">{t.nav.hobbies}</a>
+          <a href="#mis-stacks" className="py-2">{t.nav.stacks}</a>
+          <a href="#contactame" className="py-2">{t.nav.contact}</a>
+          <div className='flex items-center gap-3'>
+            <LanguageSwitch />
             <ThemeSwitch />
           </div>
         </nav>
@@ -144,10 +152,10 @@ export default function Home() {
           </div>
 
           <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="ml11 absolute text-outline text-6xl md:text-8xl lg:text-9xl font-bold text-center z-10">
+            <h1 key={locale} className="ml11 absolute text-outline text-6xl md:text-8xl lg:text-9xl font-bold text-center z-10">
               <span className="text-wrapper">
                 <span className="line line1"></span>
-                <span className="letters">SOFTWARE ENGINEER</span>
+                <span className="letters">{t.hero.title}</span>
               </span>
             </h1>
           </div>
@@ -179,7 +187,7 @@ export default function Home() {
               ></path>
             </g>
           </svg>
-            <h1 className="text-darkMode text-5xl font-bold ml-4 dark:text-brightMode">Mis proyectos</h1>
+            <h1 className="text-darkMode text-5xl font-bold ml-4 dark:text-brightMode">{t.projects.heading}</h1>
           </div>
           <Accordion />
         </section>
@@ -211,7 +219,7 @@ export default function Home() {
           <div className="h-[2px] bg-gradient-to-r from-brightMode to-darkMode dark:from-darkMode dark:to-brightMode w-4/5 mx-auto transition-all duration-500 ease-in-out hover:w-full"></div>
         </div>
         <h1 className="text-lg text-darkMode dark:text-brightMode py-2">
-          Hecho por Mario Santa <strong>ಠ_ಠ</strong>
+          {t.footer.madeBy} <strong>ಠ_ಠ</strong>
         </h1>
       </footer>
     </>

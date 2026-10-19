@@ -1,6 +1,10 @@
+'use client';
+
 import Image from 'next/image';
+import { useLanguage } from '@/i18n/LanguageProvider';
 
 export default function MisStacks() {
+  const { t } = useLanguage();
 
   return (
     <section className="bg-brightMode flex flex-col justify-center items-center py-1 dark:bg-darkMode">
@@ -36,7 +40,7 @@ export default function MisStacks() {
             </g>
         </g>
         </svg>
-          <h1 className="text-darkMode text-5xl font-bold ml-4 dark:text-brightMode">Stacks en proceso de aprender</h1>
+          <h1 className="text-darkMode text-5xl font-bold ml-4 dark:text-brightMode">{t.stacks.learningHeading}</h1>
       </div>
 
       <section className="flex space-x-16 overflow-hidden group">

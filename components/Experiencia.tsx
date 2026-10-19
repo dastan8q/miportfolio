@@ -1,5 +1,11 @@
 
+'use client';
+
+import { useLanguage } from '@/i18n/LanguageProvider';
+
 export default function Experiencia() {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-brightMode flex flex-col items-center py-44 dark:bg-darkMode">
       <div className="flex items-center mb-10">
@@ -24,75 +30,45 @@ export default function Experiencia() {
             </g>
           </g>
         </svg>
-        <h1 className="text-darkMode text-5xl font-bold ml-4 dark:text-brightMode">Experiencia</h1>
+        <h1 className="text-darkMode text-5xl font-bold ml-4 dark:text-brightMode">{t.experience.heading}</h1>
       </div>
       <aside className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto px-4">
         <div>
-          <h2 className="text-2xl font-semibold text-darkMode mb-4">Experiencia Académica</h2>
+          <h2 className="text-2xl font-semibold text-darkMode mb-4">{t.experience.academicHeading}</h2>
           <ol className="relative border-l border-darkMode dark:border-brightMode">
-            <li className="mb-10 ml-4">
-              <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
-                Julio 2026
-              </time>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Universidad Cooperativa de Colombia
-              </h3>
-              <p className="mb-4 text-base font-normal text-darkText dark:text-gray-400">
-                Me gradué como Ingeniero de Software con mención de honor por tener el mejor promedio de la carrera, fue un camino de aprendizaje que me dio las bases para resolver problemas a través del software de manera ética y responsable.
-              </p>
-            </li>
-            <li className="mb-10 ml-4">
-              <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
-                  Agosto 2021
-              </time>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  Cambridge Academy - San Juan de Pasto
-              </h3>
-              <p className="text-base font-normal text-darkText dark:text-gray-400">
-                  Me forme en una academia de ingles donde presente un examen internacional con calificaciones de B2 y C1 en los diferentes modulos de ingles.
-              </p>
-            </li>
-            <li className="mb-10 ml-4">
-              <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">Septiembre 2009</time>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Colegio San Francisco de Asis - San Juan de Pasto
-              </h3>
-              <p className="mb-4 text-base font-normal text-darkText dark:text-gray-400">
-                Estudie toda la primaria y bachillerato en el Colegio San Francisco de asis donde aprendí a ser más y mejor persona.
-              </p>
-            </li>
+            {t.experience.academic.map((item, index) => (
+              <li key={index} className="mb-10 ml-4">
+                <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
+                  {item.date}
+                </time>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {item.title}
+                </h3>
+                <p className="mb-4 text-base font-normal text-darkText dark:text-gray-400">
+                  {item.description}
+                </p>
+              </li>
+            ))}
           </ol>
         </div>
         <div>
-          <h2 className="text-2xl font-semibold text-darkMode mb-4">Experiencia Laboral</h2>
+          <h2 className="text-2xl font-semibold text-darkMode mb-4">{t.experience.workHeading}</h2>
           <ol className="relative border-l border-darkMode dark:border-brightMode">
-            <li className="mb-10 ml-4">
-              <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
-                Abril 2026
-              </time>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Ingeniero backend en Sipyme
-              </h3>
-              <p className="mb-4 text-base font-normal text-darkText dark:text-gray-400">
-                Participé en el desarrollo de una aplicación web ERP llamada Sipyme, enfocada en pequeñas y medianas empresas. Me enfoqué en el backend con Django REST framework y PostgreSQL, utilicé patrones de diseño, realicé pruebas unitarias, documenté APIs y realicé el control de versiones con Git y GitHub.
-              </p>
-            </li>
-            <li className="ml-4">
-              <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
-                Diciembre 2025
-              </time>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Mentor en programación con Python
-              </h3>
-              <p className="text-base font-normal text-darkText dark:text-gray-400">
-                Enseñé las bases de programación para estudiantes de Latinoamérica inscritos al programa PYLATINO, organizado por Uniandes en colaboración con Stanford. Hice el seguimiento de estudiantes asignados a una clase en la plataforma Code in Place.
-              </p>
-            </li>
+            {t.experience.work.map((item, index) => (
+              <li key={index} className={index === t.experience.work.length - 1 ? 'ml-4' : 'mb-10 ml-4'}>
+                <div className="absolute w-3 h-3 bg-brightTitle rounded-full mt-1.5 -left-1.5 border border-darkMode dark:border-gray-900 dark:bg-gray-700"></div>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
+                  {item.date}
+                </time>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {item.title}
+                </h3>
+                <p className="mb-4 text-base font-normal text-darkText dark:text-gray-400">
+                  {item.description}
+                </p>
+              </li>
+            ))}
           </ol>
         </div>
       </aside>

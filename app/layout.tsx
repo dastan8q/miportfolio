@@ -4,6 +4,7 @@ import '@fontsource-variable/rubik';
 import '@fontsource-variable/geologica';
 import "./globals.css";
 import { Providers } from "./providers";
+import { defaultLocale } from "@/i18n/dictionary";
 
 const geologicaRegular = localFont({
   src: "./fonts/Geologica/Geologica-Regular.ttf",
@@ -28,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang={defaultLocale} className="scroll-smooth">
       <body
         className={`${geologicaRegular.variable} ${geistMono.variable} font-rubik antialiased`}
       >

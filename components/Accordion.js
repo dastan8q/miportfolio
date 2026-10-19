@@ -2,38 +2,35 @@
 
 import Image from 'next/image';
 import { useState } from "react";
+import { useLanguage } from '@/i18n/LanguageProvider';
 
 export default function Accordion() {
   const [activeIndex, setActiveIndex] = useState(null);
+  const { t } = useLanguage();
 
   const projects = [
     { 
       name: "todo-app", 
-      description: "Todo-app es una herramienta de lista de tareas por hacer, con categorias para llevar orden de cada tarea.", 
       image: "/images/todo-app.PNG",
       link: "https://github.com/dastan8q/todo-app"
     },
     { 
       name: "Tecnologica", 
-      description: "Una plataforma web de venta de cursos online relacionados con la tecnología, con distintas funciones que contemplan un CRUD con varios modelos, interfaces, clases, etc. Donde se aplica muchos conceptos de POO.", 
       image: "/images/tecnologica.png",
       link: "https://dev.azure.com/TecnoLogica/TecnoLogica/_git/ProyectoApiTecnologica"
     },
     { 
       name: "Watch app", 
-      description: "Una aplicación de reloj multifuncional desarrollada en Java usando patron de diseño Factory Method, incluye tres componentes principales: un reloj digital, un cronómetro (stopwatch) y un temporizador (timer). Cada componente proporciona una interfaz gráfica intuitiva para gestionar y visualizar el tiempo de diferentes maneras.", 
       image: "/images/watchapp.png",
       link: "https://github.com/mario8q/WatchApp"
     },
     { 
       name: "JustWork", 
-      description: "Just Work! es una aplicación web de redes profesionales, definida para tener una fácil conexión entre profesionales que buscan trabajo y empresas que ofrecen esos empleos.", 
       image: "/images/justwork.png",
       link: "https://dev.azure.com/TecnoLogica/JustWork/_git/JustWorkAngular"
     }, 
     { 
       name: "PickurFit", 
-      description: "PickurFit es una aplicación web que facilita el proceso de generar atuendos en el día a día según diferentes parámetros como el clima, los gustos del usuario, colores, etc... incorpora redes neuronales para la generación, dashboard, calendario, armario, recomendador de prendas, chatbot, entre más funcionalidades.", 
       image: "/images/pickurfit_project.png", 
       link: "https://github.com/hamil312/outfit-gen",
       demo: "https://outfit-byjpwbuqb-hamilton-insandaras-projects.vercel.app/"
@@ -80,16 +77,16 @@ export default function Accordion() {
                   <Image 
                     className="rounded-t-lg" 
                     src={project.image} 
-                    alt={`Imagen del proyecto ${project.name}`} 
+                    alt={`${t.projects.imageAltPrefix} ${project.name}`} 
                     width={500}
                     height={500}
                   />
                 </a>
                 <div className="p-5">
                   <a href="#">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-darkMode dark:text-brightMode">Proyecto {project.name}</h5>
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-darkMode dark:text-brightMode">{t.projects.itemLabel} {project.name}</h5>
                   </a>
-                  <p className="mb-3 font-normal text-darkMode dark:text-brightTitle">{project.description}</p>
+                  <p className="mb-3 font-normal text-darkMode dark:text-brightTitle">{t.projects.descriptions[project.name]}</p>
                   <div className="flex flex-col items-start gap-3">
                     <a 
                       href={project.link} 
@@ -97,7 +94,7 @@ export default function Accordion() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-brightTitle bg-brightButton rounded-lg hover:bg-brightMode focus:ring-4 focus:outline-none focus:ring-brightButton dark:bg-darkMode dark:hover:bg-darkerText dark:focus:ring-darkMode"
                     >
-                      Source code
+                      {t.projects.sourceCode}
                       <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                         <path 
                           stroke="currentColor" 
@@ -115,7 +112,7 @@ export default function Accordion() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center px-3 py-2 text-sm font-medium text-darkMode border border-darkMode rounded-lg hover:bg-darkMode hover:text-brightTitle focus:ring-4 focus:outline-none focus:ring-darkMode dark:text-brightMode dark:border-brightMode dark:hover:bg-brightMode dark:hover:text-darkMode dark:focus:ring-brightMode"
                       >
-                        Demo
+                        {t.projects.demo}
                         <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                           <path 
                             stroke="currentColor" 

@@ -1,5 +1,11 @@
 
+'use client';
+
+import { useLanguage } from '@/i18n/LanguageProvider';
+
 export default function ContactMe() {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-brightMode flex flex-col justify-center items-center py-48 dark:bg-darkMode">
       <div className="flex items-center mb-10">
@@ -17,7 +23,7 @@ export default function ContactMe() {
         </g>
         </svg>
         <h1 className="text-darkMode text-5xl font-bold ml-4 dark:text-brightMode">
-          Contáctame
+          {t.contact.heading}
         </h1>
       </div>
       <section className="bg-brightMode dark:bg-darkMode py-20">
@@ -35,11 +41,10 @@ export default function ContactMe() {
           </div>
 
           <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start">
-            <h2 className="text-darkMode text-2xl font-bold mb-4 dark:text-brightMode">Mis redes sociales</h2>
+            <h2 className="text-darkMode text-2xl font-bold mb-4 dark:text-brightMode">{t.contact.socialHeading}</h2>
 
             <p className="text-darkText dark:text-brightTitle mb-6">
-            ¡Ahora que visitaste mi portafilio! Si tienes preguntas, proyectos nuevos o simplemente quieres hablar conmigo, 
-            no dudes en contactarme por estos medios.
+            {t.contact.body}
             </p>
 
             <div className="flex space-x-4 mb-6">
@@ -80,7 +85,7 @@ export default function ContactMe() {
                     type="button"
                     className="text-brightTitle bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 >
-                    Escríbeme por WhatsApp
+                    {t.contact.whatsapp}
                 </button>
             </a>
           </div>
