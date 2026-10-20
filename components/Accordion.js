@@ -20,11 +20,6 @@ export default function Accordion() {
       link: "https://dev.azure.com/TecnoLogica/TecnoLogica/_git/ProyectoApiTecnologica"
     },
     { 
-      name: "Watch app", 
-      image: "/images/watchapp.png",
-      link: "https://github.com/mario8q/WatchApp"
-    },
-    { 
       name: "JustWork", 
       image: "/images/justwork.png",
       link: "https://dev.azure.com/TecnoLogica/JustWork/_git/JustWorkAngular"

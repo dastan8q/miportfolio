@@ -5,7 +5,6 @@ export const defaultLocale: Locale = 'es';
 export const projectIds = [
   'todo-app',
   'Tecnologica',
-  'Watch app',
   'JustWork',
   'PickurFit',
 ] as const;
@@ -66,8 +65,6 @@ const es = {
         'Todo-app es una herramienta de lista de tareas por hacer, con categorias para llevar orden de cada tarea.',
       Tecnologica:
         'Una plataforma web de venta de cursos online relacionados con la tecnología, con distintas funciones que contemplan un CRUD con varios modelos, interfaces, clases, etc. Donde se aplica muchos conceptos de POO.',
-      'Watch app':
-        'Una aplicación de reloj multifuncional desarrollada en Java usando patron de diseño Factory Method, incluye tres componentes principales: un reloj digital, un cronómetro (stopwatch) y un temporizador (timer). Cada componente proporciona una interfaz gráfica intuitiva para gestionar y visualizar el tiempo de diferentes maneras.',
       JustWork:
         'Just Work! es una aplicación web de redes profesionales, definida para tener una fácil conexión entre profesionales que buscan trabajo y empresas que ofrecen esos empleos.',
       PickurFit:
@@ -193,8 +190,6 @@ const en: Dictionary = {
         'Todo-app is a to-do list tool with categories to keep every task organized.',
       Tecnologica:
         'A web platform for selling online technology courses, with features that include a CRUD with several models, interfaces, classes and more, applying many OOP concepts.',
-      'Watch app':
-        'A multifunctional clock application developed in Java using the Factory Method design pattern. It includes three main components: a digital clock, a stopwatch and a timer. Each component provides an intuitive graphical interface to manage and display time in different ways.',
       JustWork:
         'Just Work! is a professional networking web application, designed to make it easy to connect professionals looking for work with companies offering those jobs.',
       PickurFit:

@@ -2,6 +2,19 @@
 
 import Image from 'next/image';
 import { useLanguage } from '@/i18n/LanguageProvider';
+import StackHoverCard from '@/components/StackHoverCard';
+
+const technologies = [
+  'Python',
+  'Django',
+  'HTML',
+  'CSS3',
+  'JavaScript',
+  'PostgreSQL',
+  'MySQL',
+  'Git',
+  'GitHub',
+];
 
 export default function MisStacks() {
   const { t } = useLanguage();
@@ -24,7 +37,8 @@ export default function MisStacks() {
       </svg>
         <h1 className="text-darkMode text-5xl font-bold ml-4 dark:text-brightMode">{t.stacks.heading}</h1>
       </div>
-      <div className="flex space-x-16 overflow-hidden group">
+      <div className="group relative w-full overflow-hidden">
+        <div className="flex space-x-16">
         <section className="flex animate-loop-scroll space-x-16 group-hover:paused">
           <Image loading="lazy" src="/images/python-127-svgrepo-com.png" alt="Python" className="max-w-none" width={210} height={210}/>
           <Image loading="lazy" src="/images/django-svgrepo-com.png" alt="Django" className="max-w-none" width={210} height={210}/>
@@ -47,6 +61,8 @@ export default function MisStacks() {
           <Image loading="lazy" src="/images/postgresql-svgrepo-com.png" alt="PostgreSQL" className="max-w-none" width={210} height={210}/>
           <Image loading="lazy" src="/images/mysql-svgrepo-com.png" alt="MySQL" className="max-w-none" width={210} height={210}/>
         </section>
+        </div>
+        <StackHoverCard names={technologies} />
       </div>
     </section>
   );

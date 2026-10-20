@@ -2,6 +2,9 @@
 
 import Image from 'next/image';
 import { useLanguage } from '@/i18n/LanguageProvider';
+import StackHoverCard from '@/components/StackHoverCard';
+
+const technologies = ['Redis', 'Celery', 'RabbitMQ', 'React', 'Docker'];
 
 export default function MisStacks() {
   const { t } = useLanguage();
@@ -43,7 +46,8 @@ export default function MisStacks() {
           <h1 className="text-darkMode text-5xl font-bold ml-4 dark:text-brightMode">{t.stacks.learningHeading}</h1>
       </div>
 
-      <section className="flex space-x-16 overflow-hidden group">
+      <section className="group relative w-full overflow-hidden">
+        <div className="flex space-x-16">
         <aside className="flex animate-loop-scroll space-x-16 group-hover:paused">
             <Image loading="lazy" src="/images/redis-svgrepo-com.png" alt="Redis" className="max-w-none" width={210} height={210}/>
             <Image loading="lazy" src="/images/celery-svgrepo-com.png" alt="Celery" className="max-w-none" width={210} height={210}/>
@@ -58,6 +62,8 @@ export default function MisStacks() {
             <Image loading="lazy" src="/images/react-svgrepo-com.png" alt="React" className="max-w-none" width={210} height={210}/>
             <Image loading="lazy" src="/images/docker-svgrepo-com.png" alt="Docker" className="max-w-none" width={210} height={210}/>
         </aside>
+        </div>
+        <StackHoverCard names={technologies} />
       </section>
     </section>
   );
