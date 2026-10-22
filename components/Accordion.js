@@ -12,23 +12,34 @@ export default function Accordion() {
     { 
       name: "todo-app", 
       image: "/images/todo-app.PNG",
-      link: "https://github.com/dastan8q/todo-app"
+      link: "https://github.com/dastan8q/todo-app",
+      technologies: ["Typescript", "Javascript", "HTML", "CSS", "Git", "GitHub"]
     },
     { 
       name: "Tecnologica", 
       image: "/images/tecnologica.png",
-      link: "https://dev.azure.com/TecnoLogica/TecnoLogica/_git/ProyectoApiTecnologica"
+      link: "https://dev.azure.com/TecnoLogica/TecnoLogica/_git/ProyectoApiTecnologica",
+      technologies: ["Java", "SpringBoot", "POO", "Azure Devops"]
     },
     { 
       name: "JustWork", 
       image: "/images/justwork.png",
-      link: "https://dev.azure.com/TecnoLogica/JustWork/_git/JustWorkAngular"
+      link: "https://dev.azure.com/TecnoLogica/JustWork/_git/JustWorkAngular",
+      technologies: ["Angular", "Typescript", "Javascript", "HTML", "CSS"]
     }, 
     { 
       name: "PickurFit", 
       image: "/images/pickurfit_project.png", 
       link: "https://github.com/hamil312/outfit-gen",
-      demo: "https://outfit-byjpwbuqb-hamilton-insandaras-projects.vercel.app/"
+      demo: "https://outfit-byjpwbuqb-hamilton-insandaras-projects.vercel.app/",
+      technologies: ["Flask", "Python", "IA", "ML", "React", "Typescript", "Javascript", "HTML", "CSS", "Git", "GitHub"]
+    },
+    {
+      name: "BuildandTell", 
+      image: "/images/buildandtell.png", 
+      link: "https://github.com/mario8q/buildandtell",
+      demo: "https://buildandtell.onrender.com/",
+      technologies: ["Django", "Python", "HTML", "CSS", "Javascript", "PostgreSQL", "Render", "Neon", "Cloudinary", "Git", "GitHub"]
     }
   ];
 
@@ -78,10 +89,27 @@ export default function Accordion() {
                   />
                 </a>
                 <div className="p-5">
-                  <a href="#">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-darkMode dark:text-brightMode">{t.projects.itemLabel} {project.name}</h5>
-                  </a>
+                  
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-darkMode dark:text-brightMode">{t.projects.itemLabel} {project.name}</h5>
+                  
                   <p className="mb-3 font-normal text-darkMode dark:text-brightTitle">{t.projects.descriptions[project.name]}</p>
+                  {project.technologies.length > 0 && (
+                    <div className="mb-4">
+                      <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-darkText dark:text-brightTitle">
+                        {t.projects.technologies}
+                      </p>
+                      <ul className="flex flex-wrap gap-2">
+                        {project.technologies.map((technology) => (
+                          <li
+                            key={technology}
+                            className="rounded-full border border-brightButton px-3 py-1 text-xs font-medium text-darkMode dark:text-brightText"
+                          >
+                            {technology}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   <div className="flex flex-col items-start gap-3">
                     <a 
                       href={project.link} 

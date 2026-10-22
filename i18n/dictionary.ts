@@ -7,6 +7,7 @@ export const projectIds = [
   'Tecnologica',
   'JustWork',
   'PickurFit',
+  'BuildandTell',
 ] as const;
 
 export type ProjectId = (typeof projectIds)[number];
@@ -60,6 +61,7 @@ const es = {
     imageAltPrefix: 'Imagen del proyecto',
     sourceCode: 'Source code',
     demo: 'Demo',
+    technologies: 'Tecnologías',
     descriptions: {
       'todo-app':
         'Todo-app es una herramienta de lista de tareas por hacer, con categorias para llevar orden de cada tarea.',
@@ -69,6 +71,8 @@ const es = {
         'Just Work! es una aplicación web de redes profesionales, definida para tener una fácil conexión entre profesionales que buscan trabajo y empresas que ofrecen esos empleos.',
       PickurFit:
         'PickurFit es una aplicación web que facilita el proceso de generar atuendos en el día a día según diferentes parámetros como el clima, los gustos del usuario, colores, etc... incorpora redes neuronales para la generación, dashboard, calendario, armario, recomendador de prendas, chatbot, entre más funcionalidades.',
+      BuildandTell:
+        'Build&Tell es una aplicación web donde los usuarios pueden subir sus proyectos de software y documentarlos para exponerlos a personas interesadas en ellos, cuenta con autenticación OAUTH2 (Google y Github), creación de usuario, publicación de proyectos, creación de actualizaciones del proyecto y conexión con API de Github para sincronización de commits.',
     } as Record<ProjectId, string>,
   },
   experience: {
@@ -185,6 +189,7 @@ const en: Dictionary = {
     imageAltPrefix: 'Image of the project',
     sourceCode: 'Source code',
     demo: 'Demo',
+    technologies: 'Technologies',
     descriptions: {
       'todo-app':
         'Todo-app is a to-do list tool with categories to keep every task organized.',
@@ -194,6 +199,8 @@ const en: Dictionary = {
         'Just Work! is a professional networking web application, designed to make it easy to connect professionals looking for work with companies offering those jobs.',
       PickurFit:
         'PickurFit is a web application that streamlines generating everyday outfits based on different parameters such as the weather, the user preference, colors and more... it incorporates neural networks for generation, a dashboard, calendar, wardrobe, clothing recommender, chatbot, among other features.',
+      BuildandTell:
+        'Build&Tell is a web application where users can upload and document their software projects to showcase them to interested individuals. It features OAuth2 authentication (via Google and GitHub), user account creation, project publishing, the ability to post project updates, and integration with the GitHub API to synchronize commits.',
     },
   },
   experience: {
